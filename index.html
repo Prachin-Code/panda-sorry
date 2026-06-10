@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Best Friend</title>
+
+<style>
+  body {
+    text-align: center;
+    background: linear-gradient(#ffe6e6, #ffffff);
+    font-family: Arial, sans-serif;
+  }
+  h1 { margin-top: 40px; }
+  .panda {
+    width: 250px;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-25px);}
+  }
+  button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: #ff7f7f;
+    color: white;
+    font-size: 16px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>🐼 Sorry <span id="name">Best Friend</span> 🐼</h1>
+<p>I’m really sorry 😔<br>Please forgive me 💖</p>
+
+<img class="panda"
+src="https://media.tenor.com/NfAY4-8ZSs4AAAAj/sorry-im-sorry.gif">
+
+<br><br>
+<button onclick="playMusic()">Play Music 🎵</button>
+
+<audio id="music" loop>
+  <source src="sorry-song.mp3.mp3">
+</audio>
+
+<script>
+  const friendName = "Neelima"; // 🔴 CHANGE NAME HERE
+  document.getElementById("name").textContent = friendName;
+  function playMusic() {
+    document.getElementById("music").play();
+  }
+</script>
+
+</body>
+</html>
